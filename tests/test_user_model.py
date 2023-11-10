@@ -72,7 +72,7 @@ class UserModelTestCase(unittest.TestCase):
         self.assertTrue(u.verify_password('dog'))
 
     def test_invalid_reset_token(self):
-        u = User(password='cat')
+        u = User(password='Horse')
         db.session.add(u)
         db.session.commit()
         token = u.generate_reset_token()
